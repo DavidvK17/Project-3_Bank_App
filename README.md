@@ -9,6 +9,9 @@ There exist 4 individual user accounts (here represented by objects, normally we
 - display movements
 - calculate balance (to be implemented)
 - calculate interest (to be implemented)
+
+* sort movements
+
 - transfer money (to be implemented)
 - request loan (to be implemented)
 - close account (to be implemented)
