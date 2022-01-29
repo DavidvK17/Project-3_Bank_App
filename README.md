@@ -5,7 +5,7 @@ This is my third project, mimicking a Single Page Application (SPA) build in Van
 There exist 4 individual user accounts (here represented by objects, normally we receive this Data through an API). Each account has individual movements, an individual interest rate and the user has their own pin.
 
 - create userName
-- implement login (to be implemented)
+- implement login
 - display movements (to be implemented)
 - calculate balance (to be implemented)
 - calculate interest (to be implemented)
