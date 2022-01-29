@@ -32,7 +32,7 @@ const account4 = {
 const accounts = [account1, account2, account3, account4];
 
 // create userName
-accounts.map((acc, i) => {
+accounts.forEach((acc, i) => {
   const firstInitial = acc.owner.toLowerCase().split(' ')[0][0];
   const secondInitial = acc.owner.toLowerCase().split(' ')[1][0];
   acc.userName = firstInitial.concat(secondInitial);
