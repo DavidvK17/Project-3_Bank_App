@@ -6,7 +6,7 @@ There exist 4 individual user accounts (here represented by objects, normally we
 
 - create userName
 - implement login
-- display movements (to be implemented)
+- display movements
 - calculate balance (to be implemented)
 - calculate interest (to be implemented)
 - transfer money (to be implemented)

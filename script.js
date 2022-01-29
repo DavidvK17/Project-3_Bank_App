@@ -36,7 +36,6 @@ accounts.forEach((acc, i) => {
   const firstInitial = acc.owner.toLowerCase().split(' ')[0][0];
   const secondInitial = acc.owner.toLowerCase().split(' ')[1][0];
   acc.userName = firstInitial.concat(secondInitial);
-  console.log(acc);
 });
 
 let curAccunt;
@@ -46,24 +45,44 @@ const loginBtn = document.getElementById('login--btn');
 const user = document.getElementById('login--user');
 const userPIN = document.getElementById('login--pin');
 
-const movements = document.getElementsByClassName('movements')[0];
-console.log(movements);
+const account = document.getElementsByClassName('account')[0];
 
 function loginUser() {
-  console.log(user.value, userPIN.value);
-
   accounts.forEach(acc => {
     if (user.value === acc.userName && Number(userPIN.value) === acc.pin) {
       curAccunt = acc;
       console.log(curAccunt);
-      movements.classList.add('active');
-    } else {
-      console.log('wrong input');
+      account.classList.add('active');
+      displayMovements(curAccunt.movements);
     }
+  });
+}
+
+// Movements
+function displayMovements(acc) {
+  console.log(acc);
+
+  acc.forEach((mov, i) => {
+    console.log(mov);
+    let type = mov > 0 ? 'deposit' : 'withdrawal';
+    document.getElementById('movements-main-left').insertAdjacentHTML(
+      'afterbegin',
+      `<div class="movement">
+              <div class="movement--left">
+                  <span class="movement--type--${type}">${i + 1} ${type}</span>
+                  <span>28/01/2022</span>
+              </div >
+              <div class="momvement--right">
+                  <span>${mov} €</span>
+              </div>
+          </div>`
+    );
   });
 }
 
 loginBtn.addEventListener('click', function(e) {
   e.preventDefault();
   loginUser();
+  user.value = '';
+  userPIN.value = '';
 });
