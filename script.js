@@ -39,6 +39,8 @@ accounts.forEach((acc, i) => {
   console.log(acc);
 });
 
+let curAccunt;
+
 // Login
 const loginBtn = document.getElementById('login--btn');
 const user = document.getElementById('login--user');
@@ -47,15 +49,21 @@ const userPIN = document.getElementById('login--pin');
 const movements = document.getElementsByClassName('movements')[0];
 console.log(movements);
 
+function loginUser() {
+  console.log(user.value, userPIN.value);
+
+  accounts.forEach(acc => {
+    if (user.value === acc.userName && Number(userPIN.value) === acc.pin) {
+      curAccunt = acc;
+      console.log(curAccunt);
+      movements.classList.add('active');
+    } else {
+      console.log('wrong input');
+    }
+  });
+}
+
 loginBtn.addEventListener('click', function(e) {
   e.preventDefault();
-  console.log(user.value, userPIN.value);
-  if (
-    user.value === account1.userName &&
-    Number(userPIN.value) === account1.pin
-  ) {
-    movements.classList.add('active');
-  } else {
-    console.log('wrong input');
-  }
+  loginUser();
 });
