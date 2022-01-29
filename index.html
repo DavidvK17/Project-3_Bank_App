@@ -9,5 +9,81 @@
   </head>
   <body>
     <script src="script.js"></script>
+    <header id="top">     
+        <div id="greeting">Login to get started</div>
+        <div id="logo"><img src="/img/logo.png" alt=""></div>
+        <div id="login">
+          <input type="text" placeholder="name" />
+          <input type="text" placeholder="PIN" />
+          <span id="login--btn">&#8594</span>
+        </div>
+    </header>
+    <main>
+      <section class="movements">
+          <div id="movements--top">
+              <div><h1>Current balance</h1>
+                <br>
+                <p>As of 31/01/2022</p>
+            </div>
+              <div id="movements--balance">25 952,59 €</div>
+          </div>
+          <div id="movements--main">
+              <div id="movements-main-left">
+                  <div class="movement">
+                      <div class="movement--left">
+                          <span class="movement--type--deposit">1 Deposit</span>
+                          <span>28/01/2022</span>
+                      </div >
+                      <div class="momvement--right">
+                          <span>1300,00 €</span>
+                      </div>
+                  </div>
+                  <div class="movement">
+                    <div class="movement--left">
+                        <span class="movement--type--withdrawal">1 Withdrawal</span>
+                        <span>29/01/2022</span>
+                    </div >
+                    <div class="momvement--right">
+                        <span>300,00 €</span>
+                    </div>
+                </div>
+              </div>
+              <div id="movements-main-right">
+                  <div id="transfer">
+                          <h2>Transfer Money</h2>
+                          <label for="">Transfer to</label><br>
+                          <input type="text" /><br>
+                          <label for="">Amount</label><br>
+                          <input type="text" />
+                          <span>&#8594</span>
+                  </div>
+                  <div id="loan">
+                      <h2>Request Loan</h2>
+                      <label for="">Amount</label><br>
+                      <input type="text" />
+                      <span>&#8594</span>
+                  </div>
+                  <div id="close">
+                    <h2>Close Account</h2>
+                    <label for="">Confirm User</label><br>
+                    <input type="text" placeholder="name" /><br>
+                    <label for="">Confirm PIN</label><br>
+                    <input type="text" placeholder="PIN" />
+                </div>
+              </div>
+          </div>
+          <div id="movements--bottom">
+                <div class="movements--bottom--left">
+                    <div>IN <span>10 000,00 €</span></div>
+                    <div>OUT <span>5 000,00 €</span> <span></span></div>
+                    <div>INTEREST <span>200,00 €</span></div>
+                    <div><span>&#8595;</span>Sort</div>
+                </div>
+                <div class="movements--bottom--right">
+                    You will be logged out in <span>05:00</span>
+                </div>
+            </div>
+      </section>
+    </main>
   </body>
 </html>

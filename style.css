@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+:root {
+  --primary-color: linear-gradient(to top left, #13366a, #c3d0db);
+  --secondary-color: #efefef;
+  --tertiary-color: rgba(200, 200, 200, 0.8);
+  --fourth-color: #fff;
+  --deposit--color: #4ec443;
+  --withdrawal--color: #ce291d;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary-color);
+}
+
+#top {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#top > div {
+  width: 33%;
+}
+
+#top > div {
+  text-align: center;
+}
+
+#top > div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+#top > div > input {
+  width: 39%;
+}
+
+#top > div *:last-child {
+  width: 19%;
+}
+
+#login--btn:hover {
+  cursor: pointer;
+}
+
+.movements {
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#movements--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+#movements--main {
+  display: flex;
+  justify-content: space-between;
+  height: 65vh;
+}
+
+#movements--main > div {
+  width: 48%;
+}
+
+#movements-main-left {
+  background: var(--secondary-color);
+}
+
+#movements-main-left > div:not(:last-child) {
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.movement {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  height: 10vh;
+  align-items: center;
+}
+
+.movement--left {
+  width: 80%;
+}
+
+.movement--right {
+  width: 20%;
+}
+
+.movement--type--deposit {
+  border-radius: 15px;
+  padding: 15px;
+  background: var(--deposit--color);
+}
+
+.movement--type--withdrawal {
+  border-radius: 15px;
+  padding: 15px;
+  background: var(--withdrawal--color);
+}
+
+#movements-main-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#movements-main-right > div {
+  border: 3px solid lightcoral;
+  height: 30%;
+}
+
+#movements-main-right > div > * {
+  line-height: 1.5;
+}
+
+#movements--bottom {
+  height: 15vh;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#movements--bottom > div {
+  width: 48%;
+  color: #fff;
+}
+
+.movements--bottom--left {
+  display: flex;
+  justify-content: space-around;
+}
+
+.movements--bottom--left > * {
+  font-size: 0.6em;
+}
+
+.movements--bottom--right {
+  text-align: right;
+}
+
+.active {
+  display: block;
+}

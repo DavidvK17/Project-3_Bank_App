@@ -12,3 +12,4 @@ There exist 4 individual user accounts (here represented by objects, normally we
 * transfer money (to be implemented)
 * request loan (to be implemented)
 * close account (to be implemented)
+* implement timer on login (to be implemented)
